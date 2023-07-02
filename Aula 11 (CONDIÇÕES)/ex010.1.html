@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite o país em qual você nasceu: <input type="text" id="nasc">
+    <input type="button" id="nascbtn" value="Verificar" onclick="teste()">
+    <did id="res">Resultado:</did>
+    
+    <script>
+        function teste(){
+            var nasci = window.document.getElementById('nasc')
+            var res = window.document.getElementById('res')
+            var pais = String(nasci.value)
+            res.innerHTML= `Você nasceu em ${pais}, você é `
+
+            if(pais.toLowerCase() == 'brasil'){
+            res.innerHTML += 'Brasileiro(a)'
+           }else{
+            res.innerHTML += 'Estrangeiro(a)'
+        }
+        }
+    </script>
+</body>
+</html>
